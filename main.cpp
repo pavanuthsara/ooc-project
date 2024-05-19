@@ -310,13 +310,30 @@ private:
 
 public:
     Complaint();
-    Complaint(string complaintType, string complaintDescription,
-        string complaintStatus);
+    Complaint(string complaintType, string complaintDescription,string complaintStatus);
     Complaint(int cmd, Employee* e);
     Complaint(int cmd);
     void setComplaint(string complaint);
     void resolveComplaint();
 };
+
+Complaint::Complaint(){
+    cout << "Complaint constructor called" << endl;
+}
+
+Complaint::Complaint(string complaintType, string complaintDescription, string complaintStatus){
+}
+void Complaint::setComplaint(string complaint) {}
+void Complaint::resolveComplaint(){}
+
+Complaint::Complaint(int cmd, Employee* e){
+    compId = cmd;
+    emp = e;
+}
+
+Complaint::Complaint(int cmd){
+    compId = cmd;
+}
 
 // Claim class
 class Claim {
